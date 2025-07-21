@@ -22,6 +22,11 @@ Boosting Rooms To Go's visibility in generative AI engines like ChatGPT, Bing Co
 - Tracked the current website traffic driven by AI engines.
 - Created high-intent search queries based on real customer behavior (e.g., “best sectional sofas under $1500”).
 - Simulated Generative Engine results using GPT-4 to evaluate Rooms To Go citations.
+## 🔍 AI Session Attribution
+
+The chart below shows the traffic distribution from various AI tools across site entry points.
+
+![AI Session Source](../images/AI%20Session%20Source.jpg)
 
 ### Phase 2: Content + Schema Optimization
 - Selected 10–20 high-traffic landing and product pages.
