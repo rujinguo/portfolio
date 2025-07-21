@@ -52,6 +52,19 @@ The chart below shows the traffic distribution from various AI tools across site
 | **Structured Data** | Incomplete Product and Review schema on key pages reduced citation potential |
 
 ---
+### 🔍 Landing Page & Likely AI Search Queries
+
+This table maps high-priority landing pages to the likely AI-generated or voice search queries we optimized for:
+
+| **Landing Page**                                      | **Likely Search Queries**                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| /furniture/living-rooms/sofas/style/sectional/price/under-1500 | Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectional options |
+| /furniture/living-rooms/tv-consoles/decor/modern       | Modern TV stands for mid-century decor; Sleek TV consoles under $500; Modern entertainment centers |
+| /furniture/living-rooms/sleepers                       | Best sleeper sofas for small spaces; Good sofa beds for guests; Modern sleeper couches      |
+| /furniture/living-rooms/chairs/decor/contemporary      | Contemporary accent chairs; Modern reading chairs; Stylish chairs for minimalist decor       |
+| /furniture/home-office/desks/price/under-500           | Best desks for home office under $500; Affordable small-space desks; Cheap desks with storage |
+| /furniture/living-rooms/reclining/sectionals           | Reclining sectional sofas with cup holders; Dual-power sectionals; Leather reclining sectionals |
+
 
 ## 📈 Simulated GE Queries & Observed Behavior
 
