@@ -106,4 +106,5 @@ Top-cited competitors in these queries:
 
 ---
 
-[🔙 Back to Portfolio](/portfolio/)
+[Back to Home](/portfolio/)
+
