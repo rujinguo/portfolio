@@ -105,6 +105,6 @@ Top-cited competitors in these queries:
 - 📈 Re-audit planned Q4 2025
 
 ---
+[Back to Portfolio](https://rujinguo.github.io/portfolio/)
 
-[Back to Home](/portfolio/)
 
