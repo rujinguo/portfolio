@@ -1,5 +1,5 @@
-"GEO Optimization for AI Search"
-description: "Audited Rooms To Go’s visibility in Perplexity, Bing Copilot, and Google SGE to improve AI search presence."
+GEO Optimization for AI Search
+Audited Rooms To Go’s visibility in Perplexity, Bing Copilot, and Google SGE to improve AI search presence.
 ---
 
 ## 🔍 Project Overview
