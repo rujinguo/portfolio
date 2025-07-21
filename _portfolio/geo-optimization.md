@@ -51,6 +51,16 @@ The chart below shows the traffic distribution from various AI tools across site
 | **Content Weaknesses** | Thin product page content, lack of user reviews or blog-style answers |
 | **Structured Data** | Incomplete Product and Review schema on key pages reduced citation potential |
 
+| **Type**                  | **Example Sites**                                                                 | **Why They Get Cited**                                   |
+|---------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 🔒 Large Retailers         | wayfair.com, ashleyfurniture.com, ikea.com, homedepot.com                          | Structured product data + brand authority                 |
+| 🧾 Review Sites            | goodhousekeeping.com, thewirecutter.com, architecturaldigest.com                  | Trusted product reviews                                   |
+| 💬 Forums & Aggregators    | reddit.com, quora.com, houzz.com                                                  | Natural language + user stories                           |
+| 📄 How-to/Blog Sites       | thespruce.com, bobvila.com, homesandgardens.com                                   | SEO-optimized guides with FAQs                            |
+| 📊 Comparison Sites        | consumerreports.org, top10.com, bestproducts.com                                  | Structured rankings with context                          |
+| 📦 Schema-Rich Retailers   | target.com, walmart.com, amazon.com                                               | Deep schema & product markup                              |
+
+
 ---
 ### 🔍 Landing Page & Likely AI Search Queries
 
