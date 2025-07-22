@@ -1,186 +1,179 @@
-GEO Optimization for AI Search"
-Boosting Rooms To Go's visibility in generative AI engines like ChatGPT, Bing Copilot, and Perplexity.
+# GEO Optimization for AI Search
 
-🔍 Project Overview
+**Boosting Rooms To Go's visibility in generative AI engines like ChatGPT, Bing Copilot, and Perplexity**
 
-GEO (Generative Engine Optimization) is an emerging content strategy aimed at increasing a brand’s visibility in AI-generated search results. At Rooms To Go, I led an internal research and pilot to explore our citation performance across generative platforms like **ChatGPT**, **Bing Copilot**, and **Perplexity**, and developed strategies to improve it.
 ---
-The image shows the UI of shopping in generate engine. 
-![ChatGPT Shopping Experience](../images/AI%20shopping.png)
-## 🎯 Objectives
 
-- Audit Rooms To Go’s current visibility and citation frequency in AI-generated answers.
-- Simulate user queries to evaluate our positioning versus top retailers.
-- Identify actionable content and SEO improvements to increase citation rate.
-- Build a scalable framework to monitor AI-driven brand exposure.
+## 🔍 Project Overview
+
+Generative Engine Optimization (GEO) is an emerging content strategy focused on increasing brand visibility in AI-generated search results. At Rooms To Go, I led an internal research initiative and pilot to explore how our content performs across platforms like **ChatGPT**, **Bing Copilot**, and **Perplexity**, and developed strategies to boost citation and traffic.
+
+![ChatGPT Shopping Experience](../images/AI%20shopping.png)
+
+---
+
+## 🌟 Objectives
+
+* Audit Rooms To Go's current visibility and citation frequency in AI-generated responses.
+* Simulate user queries to assess our positioning against top competitors.
+* Identify actionable improvements to increase citation rate.
+* Build a scalable framework for ongoing monitoring of AI-driven exposure.
+
 ---
 
 ## 🛠 Methods
 
 ### Phase 1: Audit Current Visibility
-- Tracked the current website traffic driven by AI engines.
-The chart below shows the traffic distribution from various AI tools across site entry points.
 
-![AI Session Source](../images/AI%20Session%20Source.jpg)
-We can tell, the traffic driven by AI engines are spiking since the normalization of AI tools. 
+* Tracked website traffic from AI engines.
+  ![AI Session Source](../images/AI%20Session%20Source.jpg)
 
-- Created high-intent search queries based on real customer behavior (e.g., “best sectional sofas under $1500”).
-- Simulated Generative Engine results using GPT-4 to evaluate Rooms To Go citations.
-- 
-### 🔍 Landing Page & Likely AI Search Queries
+  > Traffic from AI tools is spiking as generative search tools become more mainstream.
 
-This table maps high-priority landing pages to the likely AI-generated or voice search queries we optimized for:
+* Created high-intent queries based on real consumer behavior (e.g., "best sectional sofas under \$1500").
 
-| **Landing Page**                                      | **Likely Search Queries**                                                                 |
-|--------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| /furniture/living-rooms/sofas/style/sectional/price/under-1500 | Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectional options |
-| /furniture/living-rooms/tv-consoles/decor/modern       | Modern TV stands for mid-century decor; Sleek TV consoles under $500; Modern entertainment centers |
-| /furniture/living-rooms/sleepers                       | Best sleeper sofas for small spaces; Good sofa beds for guests; Modern sleeper couches      |
-| /furniture/living-rooms/chairs/decor/contemporary      | Contemporary accent chairs; Modern reading chairs; Stylish chairs for minimalist decor       |
-| /furniture/home-office/desks/price/under-500           | Best desks for home office under $500; Affordable small-space desks; Cheap desks with storage |
-| /furniture/living-rooms/reclining/sectionals           | Reclining sectional sofas with cup holders; Dual-power sectionals; Leather reclining sectionals |
+* Used GPT-4 to simulate GE results and track Rooms To Go's presence in citations.
 
+### High-Priority Landing Pages & Likely AI Search Queries
 
-| **Type**                  | **Example Sites**                                                                 | **Why They Get Cited**                                   |
-|---------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| 🔒 Large Retailers         | wayfair.com, ashleyfurniture.com, ikea.com, homedepot.com                          | Structured product data + brand authority                 |
-| 🧾 Review Sites            | goodhousekeeping.com, thewirecutter.com, architecturaldigest.com                  | Trusted product reviews                                   |
-| 💬 Forums & Aggregators    | reddit.com, quora.com, houzz.com                                                  | Natural language + user stories                           |
-| 📄 How-to/Blog Sites       | thespruce.com, bobvila.com, homesandgardens.com                                   | SEO-optimized guides with FAQs                            |
-| 📊 Comparison Sites        | consumerreports.org, top10.com, bestproducts.com                                  | Structured rankings with context                          |
-| 📦 Schema-Rich Retailers   | target.com, walmart.com, amazon.com                                               | Deep schema & product markup                              |
+| **Landing Page**                                               | **Likely Search Queries**                                       |
+| -------------------------------------------------------------- | --------------------------------------------------------------- |
+| /furniture/living-rooms/sofas/style/sectional/price/under-1500 | Best sectional sofas under \$1500; Affordable sectional couches |
+| /furniture/living-rooms/tv-consoles/decor/modern               | Modern TV stands; Sleek TV consoles under \$500                 |
+| /furniture/living-rooms/sleepers                               | Best sleeper sofas for small spaces                             |
+| /furniture/living-rooms/chairs/decor/contemporary              | Contemporary accent chairs; Minimalist reading chairs           |
+| /furniture/home-office/desks/price/under-500                   | Best desks for home offices under \$500                         |
+| /furniture/living-rooms/reclining/sectionals                   | Leather reclining sectionals; Dual-power sectionals             |
 
+### Citation Landscape: Who Gets Cited and Why
 
+| **Type**                 | **Example Sites**      | **Why They Get Cited**                   |
+| ------------------------ | ---------------------- | ---------------------------------------- |
+| 🔒 Large Retailers       | wayfair.com, ikea.com  | Structured product data, brand authority |
+| 📋 Review Sites          | goodhousekeeping.com   | Trusted reviews                          |
+| 💬 Forums & Aggregators  | reddit.com, quora.com  | Real user stories                        |
+| 📔 How-to Sites          | thespruce.com          | SEO-optimized content                    |
+| 📊 Comparison Sites      | consumerreports.org    | Structured rankings with context         |
+| 📦 Schema-Rich Retailers | target.com, amazon.com | Deep schema markup                       |
 
-### Phase 2: Content + Schema Optimization
-- Selected 10–20 high-traffic landing and product pages.
-- Proposed enhancements:
-  - Add customer quotes, statistics, and FAQs
-  - Rewrite intros for clarity and simplicity
-  - Incorporate review, product, FAQ, and local business schema
-- Avoided keyword stuffing and prioritized fluency and snippet-ready answers
+### Phase 2: Content & Schema Optimization
 
-### Phase 3: Measure Impact (In Progress)
-- Track visibility scores and organic traffic over time
-- Compare show-up rate before/after content and schema updates
+* Selected \~20 high-traffic product pages.
+* Proposed enhancements:
+
+  * Add real quotes and visual FAQs
+  * Rewrite intros for clarity
+  * Add Product, Review, FAQ, and Local Business schema
+
+### Phase 3: Measure Impact
+
+* Track citation frequency and traffic shifts
+* Compare pre/post content updates
 
 ---
 
 ## 📊 Key Findings
 
-| Area | Observation |
-|------|-------------|
-| **Citation Gaps** | RTG was often absent in top GE citations despite ranking well in traditional SERPs |
-| **Top Cited Competitors** | Wayfair, IKEA, Ashley, The Spruce — all had rich content, schema, or review integration |
-| **Content Weaknesses** | Thin product page content, lack of user reviews or blog-style answers |
-| **Structured Data** | Incomplete Product and Review schema on key pages reduced citation potential |
+| Area                   | Insight                                                           |
+| ---------------------- | ----------------------------------------------------------------- |
+| **Citation Gaps**      | RTG rarely appeared in top AI citations despite good SERP ranking |
+| **Top Competitors**    | Wayfair, IKEA, The Spruce excel in content richness and schema    |
+| **Content Weaknesses** | Thin descriptions, missing reviews, no structured answers         |
+| **Structured Data**    | Limited or missing schema reduced eligibility for AI inclusion    |
 
 ---
 
-## 📈 Simulated GE Queries & Observed Behavior
+## 📈 Simulated Queries & Matching Pages
 
-Example queries and expected landing pages:
-- “Best reclining sectionals with USB ports” → `/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional`
-- “Contemporary accent chairs for small spaces” → `/furniture/living-rooms/chairs/decor/contemporary`
-- “Best desks under $500” → `/furniture/home-office/desks/price/under-500`
+Example Queries:
 
-Top-cited competitors in these queries:
-- **wayfair.com**, **ashleyfurniture.com**, **target.com**, **thespruce.com**
+* "Best reclining sectionals with USB ports" → `/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional`
+* "Contemporary accent chairs for small spaces" → `/furniture/living-rooms/chairs/decor/contemporary`
+* "Top desks under \$500" → `/furniture/home-office/desks/price/under-500`
+
+Top-cited competitors:
+
+* **wayfair.com**, **ashleyfurniture.com**, **thespruce.com**, **target.com**
 
 ---
 
 ## 🚀 Recommendations
 
 1. **Enhance Product Pages**
-   - Add quotes:  
-     > “Everything arrived on time and setup was fast. Best shopping experience!” — Diane R., FL
-   - Include detailed specs and benefits
-   - Add visual-rich FAQs
 
-2. **Create Intent-Matching Blog Content**
-   - Examples:  
-     - “Top 10 Sectionals Under $1500”
-     - “Best Leather Recliners for Movie Nights”
+   * Add quotes: “Best shopping experience!” — Diane R., FL
+   * Include visual-rich FAQs
 
-3. **Implement Schema Markup**
-   - Product, Review, FAQ, and Local Business schema
-   - Improve readability and discoverability for GE parsing
+2. **Create Intent-Matching Content**
 
-4. **Track & Iterate**
-   - Set up dashboards to monitor traffic from AI platforms and direct mentions
+   * Blog topics: “Top 10 Sectionals Under \$1500”, “Best Recliners for Movie Night”
+
+3. **Implement Schema**
+
+   * Add Product, Review, FAQ, and LocalBusiness schema
+
+4. **Monitor & Iterate**
+
+   * Use dashboards to track GE citations and traffic from AI tools
 
 ---
 
 ## 🧠 Lessons Learned
 
-- **AI engines prefer context-rich, human-style answers** over traditional keyword-optimized content.
-- **Schema is not optional** — it's the foundation for GE comprehension.
-- Brand authority is not enough — content format, review signals, and citation-ready snippets matter most.
+* AI prefers human-readable, context-rich content
+* Schema isn't optional—it’s critical for GE comprehension
+* Fluency and authority outweigh simple keyword optimization
 
 ---
 
 ## 🌐 Demo Page Example
 
-**Optimized Product Page Preview:**
-> [Newport Mint Leather Sectional](https://www.roomstogo.com/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional/1837897P)  
-> ★ 4.8 | In Stock | USB + Cup Holders | Dual Power | "Movie night must-have!" – Michelle, GA
-✅ Key Features
+**[Newport Mint Leather Sectional](https://www.roomstogo.com/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional/1837897P)**
+Rating: ⭐ 4.8 | In Stock | USB ports | Dual Power Recline
 
-Dual power reclining with USB ports and adjustable headrests
+🗃 Key Features
 
-Includes storage console with cup holders
-
-Upholstered in luxurious mint green top grain leather
-
-Modular 7-piece layout ideal for large living spaces
-
-Built-in lay-flat technology for ultimate relaxation
-
+* USB ports, adjustable headrests, lay-flat technology
+* Luxurious mint leather; modular 7-piece build
+* Storage console with cup holders
 
 🏡 Perfect For
 
-“This set is amazing for movie nights! The power recline is smooth, and the leather is buttery soft.”— ⭐⭐⭐⭐⭐ Michelle, GA
+> “This set is amazing for movie nights!” – Michelle, GA
 
-Spacious family rooms
+* Spacious family rooms
+* Open-concept layouts
+* Modern interiors needing a pop of color
 
-Open concept layouts
+🚚 Delivery & Assembly
 
-Modern interiors needing a pop of soft color
+* Fast Southeast U.S. delivery
+* Optional in-home assembly
+* 3-year protection plan available
 
-🛆 Delivery & Assembly
+🧰 Frequently Asked Questions
 
-Fast delivery to most Southeastern U.S. zip codes
+* **Q: What is dual power reclining?**
+  A: Independent electric controls for headrest & footrest.
+* **Q: Does it come in other colors?**
+  A: Mint is standard; check stores for similar variations.
+* **Q: Will it fit in my apartment?**
+  A: Recommended for larger rooms; check our modular models for small spaces.
+* **Q: Is assembly required?**
+  A: Yes; pro assembly is available and suggested.
+* **Q: How to clean the leather?**
+  A: Use soft damp cloths and leather-safe cleaners.
+* **Q: Warranty?**
+  A: Optional 3-year protection + manufacturer coverage
 
-Professional in-home assembly available
-
-3-year furniture protection plan optional
-❓ Frequently Asked Questions
-Q: What is dual power reclining?
-A: Dual power reclining means the headrest and footrest can be adjusted independently using electric controls for customized comfort.
-
-Q: Does the sectional come in other colors?
-A: This model is upholstered in mint green top grain leather. Additional colors may be available in similar configurations—check with your local store or Rooms To Go customer service.
-
-Q: Can I fit this sectional in a small apartment?
-A: This 7-piece layout is ideal for spacious rooms. For smaller living areas, we recommend checking our modular or 5-piece options.
-
-Q: Is professional assembly required?
-A: While assembly is straightforward, professional in-home setup is available and recommended for optimal placement and setup.
-
-Q: How do I clean and maintain the leather?
-A: Use a soft damp cloth for daily care. For deep cleaning, use leather-safe cleaners. See our Leather Care Guide for tips.
-
-Q: Is there a warranty?
-A: A 3-year furniture protection plan is available at checkout. Manufacturer warranty may apply—refer to product details or ask in store.
 ---
 
 ## 📌 Status & Next Steps
 
-- 🌱 Optimization proposals submitted to SEO/dev teams
-- 🧪 GEO scoring framework under development
-- 📈 Re-audit planned Q4 2025
+* 🌱 Optimization proposals sent to SEO/dev
+* 🧪 Monitoring framework in progress
+* 📊 Re-audit scheduled for Q4 2025
 
 ---
-[Back to Portfolio](https://rujinguo.github.io/portfolio/)
 
-
+[Back to Portfolio →](https://rujinguo.github.io/portfolio/)
