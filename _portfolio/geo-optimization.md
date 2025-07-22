@@ -123,7 +123,54 @@ Top-cited competitors in these queries:
 **Optimized Product Page Preview:**
 > [Newport Mint Leather Sectional](https://www.roomstogo.com/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional/1837897P)  
 > ★ 4.8 | In Stock | USB + Cup Holders | Dual Power | "Movie night must-have!" – Michelle, GA
+✅ Key Features
 
+Dual power reclining with USB ports and adjustable headrests
+
+Includes storage console with cup holders
+
+Upholstered in luxurious mint green top grain leather
+
+Modular 7-piece layout ideal for large living spaces
+
+Built-in lay-flat technology for ultimate relaxation
+
+
+🏡 Perfect For
+
+“This set is amazing for movie nights! The power recline is smooth, and the leather is buttery soft.”— ⭐⭐⭐⭐⭐ Michelle, GA
+
+Spacious family rooms
+
+Open concept layouts
+
+Modern interiors needing a pop of soft color
+
+🛆 Delivery & Assembly
+
+Fast delivery to most Southeastern U.S. zip codes
+
+Professional in-home assembly available
+
+3-year furniture protection plan optional
+❓ Frequently Asked Questions
+Q: What is dual power reclining?
+A: Dual power reclining means the headrest and footrest can be adjusted independently using electric controls for customized comfort.
+
+Q: Does the sectional come in other colors?
+A: This model is upholstered in mint green top grain leather. Additional colors may be available in similar configurations—check with your local store or Rooms To Go customer service.
+
+Q: Can I fit this sectional in a small apartment?
+A: This 7-piece layout is ideal for spacious rooms. For smaller living areas, we recommend checking our modular or 5-piece options.
+
+Q: Is professional assembly required?
+A: While assembly is straightforward, professional in-home setup is available and recommended for optimal placement and setup.
+
+Q: How do I clean and maintain the leather?
+A: Use a soft damp cloth for daily care. For deep cleaning, use leather-safe cleaners. See our Leather Care Guide for tips.
+
+Q: Is there a warranty?
+A: A 3-year furniture protection plan is available at checkout. Manufacturer warranty may apply—refer to product details or ask in store.
 ---
 
 ## 📌 Status & Next Steps
