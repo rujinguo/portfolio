@@ -1,11 +1,11 @@
 GEO Optimization for AI Search"
 Boosting Rooms To Go's visibility in generative AI engines like ChatGPT, Bing Copilot, and Perplexity.
 
-## 🔍 Project Overview
+🔍 Project Overview
 
-**GEO (Generative Engine Optimization)** is an emerging content strategy aimed at increasing a brand’s visibility in AI-generated search results. At Rooms To Go, I led an internal research and pilot to explore our citation performance across generative platforms like **ChatGPT**, **Bing Copilot**, and **Perplexity**, and developed strategies to improve it.
+GEO (Generative Engine Optimization) is an emerging content strategy aimed at increasing a brand’s visibility in AI-generated search results. At Rooms To Go, I led an internal research and pilot to explore our citation performance across generative platforms like **ChatGPT**, **Bing Copilot**, and **Perplexity**, and developed strategies to improve it.
 ---
-
+The image shows the UI of shopping in generate engine. 
 ![ChatGPT Shopping Experience](../images/AI%20shopping.png)
 ## 🎯 Objectives
 
