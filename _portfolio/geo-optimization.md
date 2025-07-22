@@ -13,20 +13,44 @@ The image shows the UI of shopping in generate engine.
 - Simulate user queries to evaluate our positioning versus top retailers.
 - Identify actionable content and SEO improvements to increase citation rate.
 - Build a scalable framework to monitor AI-driven brand exposure.
-
 ---
 
 ## 🛠 Methods
 
 ### Phase 1: Audit Current Visibility
 - Tracked the current website traffic driven by AI engines.
-- Created high-intent search queries based on real customer behavior (e.g., “best sectional sofas under $1500”).
-- Simulated Generative Engine results using GPT-4 to evaluate Rooms To Go citations.
-## 🔍 AI Session Attribution
-
 The chart below shows the traffic distribution from various AI tools across site entry points.
 
 ![AI Session Source](../images/AI%20Session%20Source.jpg)
+We can tell, the traffic driven by AI engines are spiking since the normalization of AI tools. 
+
+- Created high-intent search queries based on real customer behavior (e.g., “best sectional sofas under $1500”).
+- Simulated Generative Engine results using GPT-4 to evaluate Rooms To Go citations.
+- 
+### 🔍 Landing Page & Likely AI Search Queries
+
+This table maps high-priority landing pages to the likely AI-generated or voice search queries we optimized for:
+
+| **Landing Page**                                      | **Likely Search Queries**                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| /furniture/living-rooms/sofas/style/sectional/price/under-1500 | Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectional options |
+| /furniture/living-rooms/tv-consoles/decor/modern       | Modern TV stands for mid-century decor; Sleek TV consoles under $500; Modern entertainment centers |
+| /furniture/living-rooms/sleepers                       | Best sleeper sofas for small spaces; Good sofa beds for guests; Modern sleeper couches      |
+| /furniture/living-rooms/chairs/decor/contemporary      | Contemporary accent chairs; Modern reading chairs; Stylish chairs for minimalist decor       |
+| /furniture/home-office/desks/price/under-500           | Best desks for home office under $500; Affordable small-space desks; Cheap desks with storage |
+| /furniture/living-rooms/reclining/sectionals           | Reclining sectional sofas with cup holders; Dual-power sectionals; Leather reclining sectionals |
+
+
+| **Type**                  | **Example Sites**                                                                 | **Why They Get Cited**                                   |
+|---------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 🔒 Large Retailers         | wayfair.com, ashleyfurniture.com, ikea.com, homedepot.com                          | Structured product data + brand authority                 |
+| 🧾 Review Sites            | goodhousekeeping.com, thewirecutter.com, architecturaldigest.com                  | Trusted product reviews                                   |
+| 💬 Forums & Aggregators    | reddit.com, quora.com, houzz.com                                                  | Natural language + user stories                           |
+| 📄 How-to/Blog Sites       | thespruce.com, bobvila.com, homesandgardens.com                                   | SEO-optimized guides with FAQs                            |
+| 📊 Comparison Sites        | consumerreports.org, top10.com, bestproducts.com                                  | Structured rankings with context                          |
+| 📦 Schema-Rich Retailers   | target.com, walmart.com, amazon.com                                               | Deep schema & product markup                              |
+
+
 
 ### Phase 2: Content + Schema Optimization
 - Selected 10–20 high-traffic landing and product pages.
@@ -51,30 +75,7 @@ The chart below shows the traffic distribution from various AI tools across site
 | **Content Weaknesses** | Thin product page content, lack of user reviews or blog-style answers |
 | **Structured Data** | Incomplete Product and Review schema on key pages reduced citation potential |
 
-| **Type**                  | **Example Sites**                                                                 | **Why They Get Cited**                                   |
-|---------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| 🔒 Large Retailers         | wayfair.com, ashleyfurniture.com, ikea.com, homedepot.com                          | Structured product data + brand authority                 |
-| 🧾 Review Sites            | goodhousekeeping.com, thewirecutter.com, architecturaldigest.com                  | Trusted product reviews                                   |
-| 💬 Forums & Aggregators    | reddit.com, quora.com, houzz.com                                                  | Natural language + user stories                           |
-| 📄 How-to/Blog Sites       | thespruce.com, bobvila.com, homesandgardens.com                                   | SEO-optimized guides with FAQs                            |
-| 📊 Comparison Sites        | consumerreports.org, top10.com, bestproducts.com                                  | Structured rankings with context                          |
-| 📦 Schema-Rich Retailers   | target.com, walmart.com, amazon.com                                               | Deep schema & product markup                              |
-
-
 ---
-### 🔍 Landing Page & Likely AI Search Queries
-
-This table maps high-priority landing pages to the likely AI-generated or voice search queries we optimized for:
-
-| **Landing Page**                                      | **Likely Search Queries**                                                                 |
-|--------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| /furniture/living-rooms/sofas/style/sectional/price/under-1500 | Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectional options |
-| /furniture/living-rooms/tv-consoles/decor/modern       | Modern TV stands for mid-century decor; Sleek TV consoles under $500; Modern entertainment centers |
-| /furniture/living-rooms/sleepers                       | Best sleeper sofas for small spaces; Good sofa beds for guests; Modern sleeper couches      |
-| /furniture/living-rooms/chairs/decor/contemporary      | Contemporary accent chairs; Modern reading chairs; Stylish chairs for minimalist decor       |
-| /furniture/home-office/desks/price/under-500           | Best desks for home office under $500; Affordable small-space desks; Cheap desks with storage |
-| /furniture/living-rooms/reclining/sectionals           | Reclining sectional sofas with cup holders; Dual-power sectionals; Leather reclining sectionals |
-
 
 ## 📈 Simulated GE Queries & Observed Behavior
 
