@@ -1,3 +1,9 @@
+---
+layout: page
+title: GEO Optimization Case Study
+permalink: /geo-optimization/
+---
+
 # GEO Optimization for AI Search
 
 **Boosting Rooms To Go's visibility in generative AI engines like ChatGPT, Bing Copilot, and Perplexity**
