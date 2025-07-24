@@ -1,8 +1,4 @@
----
-layout: page
-title: GEO Optimization Case Study
-permalink: /geo-optimization/
----
+
 
 # GEO Optimization for AI Search
 
