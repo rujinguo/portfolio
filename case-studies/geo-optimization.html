@@ -1,35 +1,152 @@
-/* ===== Section Heading Styles ===== */
-section h2 {
-  border-bottom: 2px solid #007acc;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-  color: #007acc;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GEO Optimization for AI Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header>
+    <h1>GEO Optimization for AI Search</h1>
+    <p><strong>Boosting Rooms To Go’s visibility in generative AI engines like ChatGPT, Bing Copilot, and Perplexity</strong></p>
+    <p><a href="../index.html">← Back to Portfolio</a></p>
+    <hr>
+  </header>
 
-/* ===== Table Styles ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  text-align: left;
-}
-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
-}
+  <main>
+    <section>
+      <h2>🔍 Project Overview</h2>
+      <p>Generative Engine Optimization (GEO) is an emerging content strategy focused on increasing brand visibility in AI-generated search results. At Rooms To Go, I led an internal research pilot across <strong>ChatGPT</strong>, <strong>Bing Copilot</strong>, and <strong>Perplexity</strong>, developing strategies to boost citations and traffic.</p>
+    </section>
 
-/* ===== Container for Content ===== */
-main {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+    <section>
+      <h2>🌟 Objectives</h2>
+      <ul>
+        <li>Audit Rooms To Go’s visibility and citation frequency in AI responses.</li>
+        <li>Simulate user queries to benchmark against top competitors.</li>
+        <li>Identify actionable improvements to increase citation rate.</li>
+        <li>Build a scalable framework for ongoing AI-driven monitoring.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🛠 Methods</h2>
+      <h3>Phase 1: Audit Current Visibility</h3>
+      <ul>
+        <li>Tracked website traffic from AI engines.</li>
+        <li>Created high-intent queries (e.g., “best sectional sofas under $1500”).</li>
+        <li>Used GPT-4 to simulate results and log RTG’s citations.</li>
+      </ul>
+
+      <h4>High-Priority Landing Pages & Likely AI Queries</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Landing Page</th>
+            <th>Likely Search Queries</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/furniture/living-rooms/sofas/style/sectional/price/under-1500</td>
+            <td>Best sectional sofas under $1500; Affordable sectional couches</td>
+          </tr>
+          <tr>
+            <td>/furniture/living-rooms/tv-consoles/decor/modern</td>
+            <td>Modern TV stands; Sleek TV consoles under $500</td>
+          </tr>
+          <tr>
+            <td>/furniture/living-rooms/sleepers</td>
+            <td>Best sleeper sofas for small spaces</td>
+          </tr>
+          <!-- additional rows as needed -->
+        </tbody>
+      </table>
+
+      <h4>Citation Landscape</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th><th>Example Sites</th><th>Why They Get Cited</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>🔒 Large Retailers</td><td>wayfair.com, ikea.com</td><td>Structured data, brand authority</td></tr>
+          <tr><td>📋 Review Sites</td><td>goodhousekeeping.com</td><td>Trusted reviews</td></tr>
+          <tr><td>💬 Forums</td><td>reddit.com, quora.com</td><td>Real user stories</td></tr>
+          <tr><td>📔 How-to Sites</td><td>thespruce.com</td><td>SEO-optimized content</td></tr>
+          <tr><td>📊 Comparison</td><td>consumerreports.org</td><td>Structured rankings</td></tr>
+          <tr><td>📦 Schema-Rich Retailers</td><td>target.com, amazon.com</td><td>Deep schema markup</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Phase 2: Content & Schema Optimization</h2>
+      <ul>
+        <li>Selected ~20 high-traffic product pages.</li>
+        <li>Enhancements:
+          <ul>
+            <li>Real quotes & visual FAQs</li>
+            <li>Clear, engaging intros</li>
+            <li>Product, Review, FAQ & LocalBusiness schema</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Phase 3: Measure Impact</h2>
+      <ul>
+        <li>Track citation frequency & traffic shifts</li>
+        <li>Compare pre/post updates</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Key Findings</h2>
+      <table>
+        <thead><tr><th>Area</th><th>Insight</th></tr></thead>
+        <tbody>
+          <tr><td>Citation Gaps</td><td>RTG rarely appeared in top AI citations.</td></tr>
+          <tr><td>Top Competitors</td><td>Wayfair, IKEA & The Spruce excel in schema & content depth.</td></tr>
+          <tr><td>Content Weaknesses</td><td>Thin descriptions, missing reviews, lack of structured answers.</td></tr>
+          <tr><td>Schema</td><td>Limited schema reduced AI eligibility.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>🚀 Recommendations</h2>
+      <ol>
+        <li><strong>Enhance Product Pages:</strong> add quotes & FAQs</li>
+        <li><strong>Create Intent-Matching Content:</strong> blogs like “Top 10 Sectionals Under $1500”</li>
+        <li><strong>Implement Schema:</strong> Product, Review, FAQ, LocalBusiness</li>
+        <li><strong>Monitor & Iterate:</strong> dashboards for GE citations & AI traffic</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🧠 Lessons Learned</h2>
+      <ul>
+        <li>AI prefers context-rich, human-readable content</li>
+        <li>Schema is critical for AI inclusion</li>
+        <li>Authority & fluency outweigh simple keywords</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌐 Demo Page Example</h2>
+      <p><a href="https://www.roomstogo.com/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional/1837897P" target="_blank">
+        Newport Mint Leather Sectional →
+      </a></p>
+      <p>Rating: ⭐️ 4.8 | In Stock | USB ports | Dual Power Recline</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ruby Guo | <a href="../index.html">Back to Portfolio</a></p>
+  </footer>
+</body>
+</html>
