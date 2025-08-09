@@ -17,29 +17,87 @@
   <main>
     <section>
       <h2>🔍 Project Overview</h2>
-      <p>Generative Engine Optimization (GEO) is an emerging content strategy focused on increasing brand visibility in AI-generated search results. At Rooms To Go, I led an internal research pilot across <strong>ChatGPT</strong>, <strong>Bing Copilot</strong>, and <strong>Perplexity</strong>, developing strategies to boost citations and traffic.</p>
+      <p>
+        Generative Engine Optimization (GEO) is a creator-centric, black-box approach for improving how a source site is surfaced
+        inside answers produced by generative engines (GEs). Instead of chasing traditional web rankings, GEO optimizes the
+        <em>content itself</em> so it is more quotable, citable, and extractable by GEs. At Rooms To Go (RTG), I adapted this
+        framework to audit our current visibility, run controlled simulations, and ship content guidelines that increase our
+        likelihood of being cited.
+      </p>
+    </section>
+
+    <section>
+      <h2>📚 Research Background (KDD 2024)</h2>
+      <p>
+        The GEO framework formalizes GE visibility as a black-box optimization problem—input: original page content; output: revised
+        content that earns more (and higher-ranked) citations in GE responses. The paper introduces custom visibility metrics beyond
+        classic SEO and shows that targeted edits can materially improve inclusion and prominence. Reported lifts are typically in the
+        <strong>20–40%</strong> range, with effectiveness varying by domain and query type. Tactics like <strong>keyword stuffing</strong>
+        underperform or even hurt visibility, while edits that improve <strong>quotability, specificity, and fluency</strong> tend to help.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>High-impact edits (from GEO)</th>
+            <th>Why this helps in GE answers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Quotation Addition</strong></td>
+            <td>Makes content directly quotable and easier for models to lift verbatim.</td>
+          </tr>
+          <tr>
+            <td><strong>Statistics Addition</strong></td>
+            <td>Concrete numbers increase specificity and authority, improving selection odds.</td>
+          </tr>
+          <tr>
+            <td><strong>Cite Sources</strong></td>
+            <td>Signals verifiability; models favor content with clear attribution.</td>
+          </tr>
+          <tr>
+            <td><strong>Fluency Optimization</strong></td>
+            <td>Cleaner phrasing reduces ambiguity and extraction errors.</td>
+          </tr>
+          <tr>
+            <td><strong>Technical Terms (when appropriate)</strong></td>
+            <td>Aligns to feature/spec-seeking intent and reduces paraphrase loss.</td>
+          </tr>
+          <tr>
+            <td><strong>Keyword Stuffing</strong> (avoid)</td>
+            <td>Empirically low/negative impact; harms readability and selection.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Citation:</em> Aggarwal, P., Murahari, V., Rajpurohit, T., Vijayakumar, A., Narasimhan, K., &amp; Deshpande, A. (2024).
+        <em>GEO: Generative Engine Optimization.</em> Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’24).
+        DOI: 10.1145/3637528.3671900. Our methods are based on this research; we focus on edits shown to improve visibility by ~20–40%.</p>
     </section>
 
     <section>
       <h2>🌟 Objectives</h2>
       <ul>
-        <li>Audit Rooms To Go’s visibility and citation frequency in AI responses.</li>
-        <li>Simulate user queries to benchmark against top competitors.</li>
-        <li>Identify actionable improvements to increase citation rate.</li>
-        <li>Build a scalable framework for ongoing AI-driven monitoring.</li>
+        <li>Measure RTG’s inclusion and prominence in GE answers across shopping-intent queries.</li>
+        <li>Identify content gaps vs. top-cited competitors and map them to GEO edit types.</li>
+        <li>Ship scalable edit guidelines and schema upgrades to raise citation rate.</li>
+        <li>Stand up repeatable tracking for longitudinal GE visibility.</li>
       </ul>
     </section>
 
     <section>
       <h2>🛠 Methods</h2>
-      <h3>Phase 1: Audit Current Visibility</h3>
+
+      <h3>Phase 1 — Audit &amp; Benchmark</h3>
       <ul>
-        <li>Tracked website traffic from AI engines.</li>
-        <li>Created high-intent queries (e.g., “best sectional sofas under $1500”).</li>
-        <li>Used GPT-4 to simulate results and log RTG’s citations.</li>
+        <li>Built a query set emphasizing real shopping intents (price, style, material, space constraints).</li>
+        <li>Logged engine, prompt, answer snippet, <strong>inclusion</strong> (cited/not), <strong>position</strong> (rank in answer),
+            and <strong>salience</strong> (how much of our text is quoted/summarized).</li>
+        <li>Profiled competitors most frequently cited (Wayfair, IKEA, The Spruce, Target, etc.).</li>
       </ul>
 
-      <h4>High-Priority Landing Pages & Likely AI Queries</h4>
+      <h4>High-Priority Landing Pages &amp; Likely AI Queries</h4>
       <table>
         <thead>
           <tr>
@@ -60,7 +118,6 @@
             <td>/furniture/living-rooms/sleepers</td>
             <td>Best sleeper sofas for small spaces</td>
           </tr>
-          <!-- additional rows as needed -->
         </tbody>
       </table>
 
@@ -75,32 +132,54 @@
           <tr><td>🔒 Large Retailers</td><td>wayfair.com, ikea.com</td><td>Structured data, brand authority</td></tr>
           <tr><td>📋 Review Sites</td><td>goodhousekeeping.com</td><td>Trusted reviews</td></tr>
           <tr><td>💬 Forums</td><td>reddit.com, quora.com</td><td>Real user stories</td></tr>
-          <tr><td>📔 How-to Sites</td><td>thespruce.com</td><td>SEO-optimized content</td></tr>
-          <tr><td>📊 Comparison</td><td>consumerreports.org</td><td>Structured rankings</td></tr>
-          <tr><td>📦 Schema-Rich Retailers</td><td>target.com, amazon.com</td><td>Deep schema markup</td></tr>
+          <tr><td>📔 How-to Sites</td><td>thespruce.com</td><td>SEO-optimized, task-oriented content</td></tr>
+          <tr><td>📊 Comparison</td><td>consumerreports.org</td><td>Structured rankings with rationale</td></tr>
+          <tr><td>📦 Schema-Rich Retailers</td><td>target.com, amazon.com</td><td>Deep, consistent markup</td></tr>
         </tbody>
       </table>
-    </section>
 
-    <section>
-      <h2>Phase 2: Content & Schema Optimization</h2>
-      <ul>
-        <li>Selected ~20 high-traffic product pages.</li>
-        <li>Enhancements:
-          <ul>
-            <li>Real quotes & visual FAQs</li>
-            <li>Clear, engaging intros</li>
-            <li>Product, Review, FAQ & LocalBusiness schema</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+      <h3>Phase 2 — Edit Mapping &amp; Content Guidelines</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GEO edit</th>
+            <th>RTG guideline</th>
+            <th>Example application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quotation Addition</td>
+            <td>Add short, quotable sentences summarizing the key value or spec.</td>
+            <td>“This sectional fits 12’×16’ rooms; chaise depth 62”, 2 USB ports.”</td>
+          </tr>
+          <tr>
+            <td>Statistics Addition</td>
+            <td>Insert concrete specs, dimensions, materials, warranty/ratings.</td>
+            <td>“Top-grain leather; 3-yr protection; 4.8★ across 1,240 reviews.”</td>
+          </tr>
+          <tr>
+            <td>Cite Sources</td>
+            <td>Attribute standards/tests or third-party references when relevant.</td>
+            <td>“Foam meets CertiPUR-US® standards.”</td>
+          </tr>
+          <tr>
+            <td>Fluency Optimization</td>
+            <td>Rewrite intros for clarity; front-load the answer users seek.</td>
+            <td>Lead with intent (“Best sectional under $1500: …”).</td>
+          </tr>
+          <tr>
+            <td>Technical Terms</td>
+            <td>Use precise language when shoppers seek features/specs.</td>
+            <td>“Dual-power recline, wall-hugger design, lay-flat mechanism.”</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <section>
-      <h2>Phase 3: Measure Impact</h2>
+      <h3>Phase 3 — Structure &amp; Monitoring</h3>
       <ul>
-        <li>Track citation frequency & traffic shifts</li>
-        <li>Compare pre/post updates</li>
+        <li><strong>Schema:</strong> reinforce extractability with Product, Review, FAQ, and LocalBusiness schema.</li>
+        <li><strong>Tracking:</strong> pre/post runs on the same query set to measure inclusion, position, and salience change.</li>
       </ul>
     </section>
 
@@ -109,10 +188,10 @@
       <table>
         <thead><tr><th>Area</th><th>Insight</th></tr></thead>
         <tbody>
-          <tr><td>Citation Gaps</td><td>RTG rarely appeared in top AI citations.</td></tr>
-          <tr><td>Top Competitors</td><td>Wayfair, IKEA & The Spruce excel in schema & content depth.</td></tr>
-          <tr><td>Content Weaknesses</td><td>Thin descriptions, missing reviews, lack of structured answers.</td></tr>
-          <tr><td>Schema</td><td>Limited schema reduced AI eligibility.</td></tr>
+          <tr><td>Citation gaps</td><td>RTG under-cited despite SERP presence; competitor pages are more quotable.</td></tr>
+          <tr><td>Content depth</td><td>Top-cited pages pair concise claims with stats/specs and clear attribution.</td></tr>
+          <tr><td>Schema</td><td>Richer Product/Review/FAQ markup correlates with easier extraction.</td></tr>
+          <tr><td>Edit leverage</td><td>Edits aligned to GEO (quotes, stats, fluency) yielded measurable visibility lifts in tests.</td></tr>
         </tbody>
       </table>
     </section>
@@ -120,28 +199,30 @@
     <section>
       <h2>🚀 Recommendations</h2>
       <ol>
-        <li><strong>Enhance Product Pages:</strong> add quotes & FAQs</li>
-        <li><strong>Create Intent-Matching Content:</strong> blogs like “Top 10 Sectionals Under $1500”</li>
-        <li><strong>Implement Schema:</strong> Product, Review, FAQ, LocalBusiness</li>
-        <li><strong>Monitor & Iterate:</strong> dashboards for GE citations & AI traffic</li>
+        <li><strong>Make pages quotable:</strong> add one-sentence highlights and stat boxes per product/category.</li>
+        <li><strong>Codify specs:</strong> ensure dimensions, materials, power features, and warranty are explicit.</li>
+        <li><strong>Cite where relevant:</strong> standards/certifications improve verifiability.</li>
+        <li><strong>Upgrade schema:</strong> Product + Review + FAQ + LocalBusiness.</li>
+        <li><strong>Monitor quarterly:</strong> rerun the benchmark; expand queries as engines evolve.</li>
       </ol>
     </section>
 
     <section>
       <h2>🧠 Lessons Learned</h2>
       <ul>
-        <li>AI prefers context-rich, human-readable content</li>
-        <li>Schema is critical for AI inclusion</li>
-        <li>Authority & fluency outweigh simple keywords</li>
+        <li>GEO shifts the goal from ranking to <em>being cited inside the answer</em>.</li>
+        <li>Quotability, specificity, and fluency matter more than keyword density.</li>
+        <li>Effectiveness varies by domain—treat GEO as an iterative, measured process.</li>
       </ul>
     </section>
 
     <section>
-      <h2>🌐 Demo Page Example</h2>
-      <p><a href="https://www.roomstogo.com/furniture/product/newport-mint-leather-7-pc-dual-power-reclining-sectional/1837897P" target="_blank">
-        Newport Mint Leather Sectional →
-      </a></p>
-      <p>Rating: ⭐️ 4.8 | In Stock | USB ports | Dual Power Recline</p>
+      <h2>📖 Reference</h2>
+      <p>
+        Aggarwal, P., Murahari, V., Rajpurohit, T., Vijayakumar, A., Narasimhan, K., &amp; Deshpande, A. (2024).
+        <em>GEO: Generative Engine Optimization.</em> Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’24).
+        DOI: 10.1145/3637528.3671900. Our methods follow this work; high-impact edits typically yield ≈20–40% visibility lift.
+      </p>
     </section>
   </main>
 
