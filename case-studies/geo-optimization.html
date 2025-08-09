@@ -106,21 +106,125 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>/furniture/living-rooms/sofas/style/sectional/price/under-1500</td>
-            <td>Best sectional sofas under $1500; Affordable sectional couches</td>
-          </tr>
-          <tr>
-            <td>/furniture/living-rooms/tv-consoles/decor/modern</td>
-            <td>Modern TV stands; Sleek TV consoles under $500</td>
-          </tr>
-          <tr>
-            <td>/furniture/living-rooms/sleepers</td>
-            <td>Best sleeper sofas for small spaces</td>
-          </tr>
-        </tbody>
+    <tr>
+      <td>/furniture/living-rooms/sofas/style/sectional/price/under-1500</td>
+      <td>Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectionals</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/tv-consoles/decor/modern</td>
+      <td>Modern TV stands; Sleek entertainment centers under $500; Mid-century TV consoles</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/sleepers</td>
+      <td>Best sleeper sofas for small spaces; Comfortable sofa beds for guests; Queen sleeper couch</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/chairs/decor/contemporary</td>
+      <td>Contemporary accent chairs; Reading chair for minimalist decor; Stylish accent chairs</td>
+    </tr>
+    <tr>
+      <td>/furniture/home-office/desks/price/under-500</td>
+      <td>Best desks under $500; Affordable small-space desks; Cheap desks with storage</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/reclining/sectionals</td>
+      <td>Reclining sectionals with cup holders; Dual-power reclining sectional; Leather reclining sectional</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/sofas/style/leather</td>
+      <td>Leather sofas under $1000; Top-grain leather couches; Easy-clean leather sofa</td>
+    </tr>
+    <tr>
+      <td>/furniture/kids-and-teens/beds/bunk-beds</td>
+      <td>Sturdy bunk beds with storage; Twin over full bunk bed; Kids bunk bed with staircase</td>
+    </tr>
+    <tr>
+      <td>/furniture/dining-rooms/sets/extendable</td>
+      <td>Extendable dining table set; Small dining set for apartment; 6-piece dining under $800</td>
+    </tr>
+    <tr>
+      <td>/furniture/mattresses/memory-foam/size/king</td>
+      <td>Best king memory foam mattress; Cooling memory foam; Adjustable-base compatible mattresses</td>
+    </tr>
+    <tr>
+      <td>/furniture/patio/conversation-sets</td>
+      <td>Patio conversation sets for small balcony; Weather-resistant outdoor sectional; Wicker patio set</td>
+    </tr>
+    <tr>
+      <td>/furniture/nursery/gliders</td>
+      <td>Best nursery glider recliner; Quiet nursery chair; Easy-clean nursery rocker</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/tv-consoles/feature/fireplace</td>
+      <td>TV stand with fireplace; Media console with heater; Electric fireplace console</td>
+    </tr>
+    <tr>
+      <td>/furniture/bedrooms/style/coastal</td>
+      <td>Coastal bedroom sets; Beach-style bedroom furniture; Light wood bedroom set</td>
+    </tr>
+    <tr>
+      <td>/furniture/kids-and-teens/desks</td>
+      <td>Kids desk with storage; Small desk for homework; Study desk for teens</td>
+    </tr>
+    <tr>
+      <td>/furniture/bedrooms/beds/style/platform/feature/storage</td>
+      <td>Queen platform bed with drawers; Storage bed for small rooms; No-box-spring bed</td>
+    </tr>
+    <tr>
+      <td>/furniture/living-rooms/sofas/style/sectional/feature/chaise</td>
+      <td>Small sectional with chaise; Apartment sectional; 2-piece sectional for small spaces</td>
+    </tr>
+    <tr>
+      <td>/furniture/recliners/power</td>
+      <td>Power recliner with USB; Leather power recliner; Wall-hugger recliner</td>
+    </tr>
+    <tr>
+      <td>/customer-service/delivery</td>
+      <td>Same-day furniture delivery; Delivery times near me; Track furniture delivery</td>
+    </tr>
+    <tr>
+      <td>/customer-service/financing</td>
+      <td>Furniture financing 0% APR; No-interest furniture payments; 60-month financing couches</td>
+    </tr>
+  </tbody>
       </table>
-
+      <h4>Brand / Non-brand / Geo query patterns used in simulations</h4>
+      <table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Intent</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Brand + Category + Price/Feature</td>
+      <td>Shopping with brand bias</td>
+      <td>“rooms to go sectional under $1500”, “rooms to go leather sofa easy clean”</td>
+    </tr>
+    <tr>
+      <td>Brand + Geo + Category</td>
+      <td>Local availability</td>
+      <td>“rooms to go miami sectional”, “rooms to go orlando kids bunk bed”</td>
+    </tr>
+    <tr>
+      <td>Non-brand + Feature + Price</td>
+      <td>Open consideration</td>
+      <td>“best reclining sectional with USB”, “extendable dining set under $800”</td>
+    </tr>
+    <tr>
+      <td>Non-brand + Geo + Category</td>
+      <td>Local search without brand</td>
+      <td>“leather sofa atlanta”, “bunk bed knoxville”</td>
+    </tr>
+    <tr>
+      <td>Purchase trigger</td>
+      <td>Conversion-proximate</td>
+      <td>“same-day delivery couch”, “furniture 0% financing near me”</td>
+    </tr>
+  </tbody>
+</table>
       <h4>Citation Landscape</h4>
       <table>
         <thead>
@@ -198,13 +302,55 @@
 
     <section>
       <h2>🚀 Recommendations</h2>
-      <ol>
-        <li><strong>Make pages quotable:</strong> add one-sentence highlights and stat boxes per product/category.</li>
-        <li><strong>Codify specs:</strong> ensure dimensions, materials, power features, and warranty are explicit.</li>
-        <li><strong>Cite where relevant:</strong> standards/certifications improve verifiability.</li>
-        <li><strong>Upgrade schema:</strong> Product + Review + FAQ + LocalBusiness.</li>
-        <li><strong>Monitor quarterly:</strong> rerun the benchmark; expand queries as engines evolve.</li>
-      </ol>
+<ol>
+  <li><strong>Make pages quotable (answer-first).</strong>
+    <ul>
+      <li>Add a 1–2 sentence “Key Takeaway” at the top of each product/category page with the main value prop, price/size guardrails, and 1–2 standout specs.</li>
+      <li>Use short, liftable lines (supports GEO’s “Quotation Addition”).</li>
+    </ul>
+  </li>
+
+  <li><strong>Codify specs & stats.</strong>
+    <ul>
+      <li>Ensure core specs are explicit and consistent: dimensions, materials, power features, warranty, review count & rating.</li>
+      <li>Add micro-facts that models can quote: “fits 12’×16’ rooms”, “chaise depth 62””, “USB-A & USB-C ports”.</li>
+    </ul>
+  </li>
+
+  <li><strong>Intent-matching content.</strong>
+    <ul>
+      <li>Publish buying guides that mirror the highest-volume intents (e.g., “Top 10 Sectionals Under $1500”, “Best Sleeper Sofas for Small Spaces”).</li>
+      <li>Add mini-FAQs per page answering the exact prompts we test (delivery, financing, assembly, care, space fit).</li>
+    </ul>
+  </li>
+
+  <li><strong>Structured data that aids extraction.</strong>
+    <ul>
+      <li>Implement/refresh <em>Product</em>, <em>Review</em>, <em>FAQ</em>, and <em>LocalBusiness</em> schema. Keep values synchronized with the UI.</li>
+      <li>Use canonical model numbers and consistent naming to reduce entity ambiguity.</li>
+    </ul>
+  </li>
+
+  <li><strong>Local & conversion signals.</strong>
+    <ul>
+      <li>Strengthen store pages with inventory hints, hours, and nearby availability to win brand+geo prompts.</li>
+      <li>Link clearly to <code>/customer-service/delivery</code> and <code>/customer-service/financing</code>; add concise, quotable policy summaries.</li>
+    </ul>
+  </li>
+
+  <li><strong>Measurement & iteration.</strong>
+    <ul>
+      <li>Track: inclusion (cited/not), position in the answer, and salience (text quoted) by query family and engine.</li>
+      <li>Run pre/post tests after each content release; expand query sets quarterly as engines evolve.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="callout">
+  <strong>Priority rollout (6–8 weeks):</strong>
+  Week 1–2: Spec/FAQ blocks on top 20 pages • Week 3–4: Buying-guide pair for sectionals & sleepers • Week 5–6: Schema audit & fixes • Week 7–8: Re-benchmark, report lifts.
+</div>
+
     </section>
 
     <section>
