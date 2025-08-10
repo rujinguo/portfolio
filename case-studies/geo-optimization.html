@@ -15,195 +15,113 @@
   </header>
 
   <main>
+    <!-- 1) Overview -->
     <section>
       <h2>🔍 Project Overview</h2>
       <p>
-        Generative Engine Optimization (GEO) is a creator-centric, black-box approach for improving how a source site is surfaced
-        inside answers produced by generative engines (GEs). Instead of chasing traditional web rankings, GEO optimizes the
-        <em>content itself</em> so it is more quotable, citable, and extractable by GEs. At Rooms To Go (RTG), I adapted this
-        framework to audit our current visibility, run controlled simulations, and ship content guidelines that increase our
-        likelihood of being cited.
+        Generative Engine Optimization (GEO) improves how a source site is cited inside answers produced by
+        generative engines (GEs). Instead of chasing traditional rankings, GEO optimizes the <em>content itself</em>
+        so it is more quotable, citable, and extractable. At Rooms To Go (RTG), I adapted this framework to
+        benchmark our visibility and ship content guidelines that raise our chances of being cited.
       </p>
     </section>
 
+    <!-- 2) Research background -->
     <section>
       <h2>📚 Research Background (KDD 2024)</h2>
       <p>
-        The GEO framework formalizes GE visibility as a black-box optimization problem—input: original page content; output: revised
-        content that earns more (and higher-ranked) citations in GE responses. The paper introduces custom visibility metrics beyond
-        classic SEO and shows that targeted edits can materially improve inclusion and prominence. Reported lifts are typically in the
-        <strong>20–40%</strong> range, with effectiveness varying by domain and query type. Tactics like <strong>keyword stuffing</strong>
-        underperform or even hurt visibility, while edits that improve <strong>quotability, specificity, and fluency</strong> tend to help.
+        The GEO framework formalizes GE visibility as a black-box optimization problem—input: original page content;
+        output: revised content that earns more (and higher-ranked) citations in GE responses. The authors report
+        <strong>~20–40% lifts</strong> from targeted edits, while keyword stuffing underperforms or harms visibility.
       </p>
-      <figure class="figure">
-  <img src="../images/Generative Engine.png" class="img-60" alt="GEO methods">
-  <figcaption class="figcaption">Introducing GEO.</figcaption>
-</figure>
 
-<!-- Thumbnail that crops to a fixed height -->
-<img src="../images/geo-intro.png" class="thumb-cover" alt="GEO intro">
+      <div class="grid-2">
+        <figure class="figure">
+          <img src="../images/generative-engine.png" class="img-60" alt="GEO pipeline overview">
+          <figcaption class="figcaption">GEO: creator-centric approach with custom visibility metrics.</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="../images/geo-intro.png" class="img-60" alt="High-impact GEO methods">
+          <figcaption class="figcaption">High-impact edits: quotation &amp; statistics addition, citing sources, fluency.</figcaption>
+        </figure>
+      </div>
 
       <table>
         <thead>
-          <tr>
-            <th>High-impact edits (from GEO)</th>
-            <th>Why this helps in GE answers</th>
-          </tr>
+          <tr><th>High-impact edits (from GEO)</th><th>Why this helps in GE answers</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Quotation Addition</strong></td>
-            <td>Makes content directly quotable and easier for models to lift verbatim.</td>
-          </tr>
-          <tr>
-            <td><strong>Statistics Addition</strong></td>
-            <td>Concrete numbers increase specificity and authority, improving selection odds.</td>
-          </tr>
-          <tr>
-            <td><strong>Cite Sources</strong></td>
-            <td>Signals verifiability; models favor content with clear attribution.</td>
-          </tr>
-          <tr>
-            <td><strong>Fluency Optimization</strong></td>
-            <td>Cleaner phrasing reduces ambiguity and extraction errors.</td>
-          </tr>
-          <tr>
-            <td><strong>Technical Terms (when appropriate)</strong></td>
-            <td>Aligns to feature/spec-seeking intent and reduces paraphrase loss.</td>
-          </tr>
-          <tr>
-            <td><strong>Keyword Stuffing</strong> (avoid)</td>
-            <td>Empirically low/negative impact; harms readability and selection.</td>
-          </tr>
+          <tr><td><strong>Quotation Addition</strong></td><td>Creates liftable, verbatim snippets models can cite.</td></tr>
+          <tr><td><strong>Statistics Addition</strong></td><td>Specific numbers raise authority and selection odds.</td></tr>
+          <tr><td><strong>Cite Sources</strong></td><td>Signals verifiability; models prefer attributed claims.</td></tr>
+          <tr><td><strong>Fluency Optimization</strong></td><td>Clear phrasing reduces extraction errors.</td></tr>
+          <tr><td><strong>Technical Terms (when appropriate)</strong></td><td>Aligns to feature/spec intent.</td></tr>
+          <tr><td><strong>Keyword Stuffing</strong> (avoid)</td><td>Low/negative impact; hurts readability.</td></tr>
         </tbody>
       </table>
 
       <p><em>Citation:</em> Aggarwal, P., Murahari, V., Rajpurohit, T., Vijayakumar, A., Narasimhan, K., &amp; Deshpande, A. (2024).
-        <em>GEO: Generative Engine Optimization.</em> Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’24).
-        DOI: 10.1145/3637528.3671900. Our methods are based on this research; we focus on edits shown to improve visibility by ~20–40%.</p>
+        <em>GEO: Generative Engine Optimization.</em> KDD ’24. DOI: 10.1145/3637528.3671900.
+      </p>
     </section>
 
+    <!-- 3) Objectives -->
     <section>
       <h2>🌟 Objectives</h2>
       <ul>
         <li>Measure RTG’s inclusion and prominence in GE answers across shopping-intent queries.</li>
         <li>Identify content gaps vs. top-cited competitors and map them to GEO edit types.</li>
-        <li>Ship scalable edit guidelines and schema upgrades to raise citation rate.</li>
+        <li>Ship scalable edit guidelines + schema upgrades to raise citation rate.</li>
         <li>Stand up repeatable tracking for longitudinal GE visibility.</li>
       </ul>
     </section>
 
+    <!-- 4) Methods -->
     <section>
       <h2>🛠 Methods</h2>
 
       <h3>Phase 1 — Audit &amp; Benchmark</h3>
       <ul>
-        <li>Built a query set emphasizing real shopping intents (price, style, material, space constraints).</li>
-        <li>Logged engine, prompt, answer snippet, <strong>inclusion</strong> (cited/not), <strong>position</strong> (rank in answer),
+        <li>Built a query set reflecting real shopping intents (price, style, material, space constraints).</li>
+        <li>Logged engine, prompt, answer snippet, <strong>inclusion</strong> (cited/not), <strong>position</strong> (rank),
             and <strong>salience</strong> (how much of our text is quoted/summarized).</li>
-        <li>Profiled competitors most frequently cited (Wayfair, IKEA, The Spruce, Target, etc.).</li>
+        <li>Profiled frequently cited competitors (Wayfair, IKEA, The Spruce, Target, etc.).</li>
       </ul>
 
-      <h4>High-Priority Landing Pages &amp; Likely AI Queries</h4>
+      <h4>High-Priority Landing Pages &amp; Likely AI Queries (RTG examples)</h4>
       <table>
-        <thead>
-          <tr>
-            <th>Landing Page</th>
-            <th>Likely Search Queries</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Landing Page</th><th>Likely Search Queries</th></tr></thead>
         <tbody>
-    <tr>
-      <td>/furniture/living-rooms/sofas/style/sectional/price/under-1500</td>
-      <td>Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectionals</td>
-    </tr>
-    <tr>
-      <td>/furniture/living-rooms/tv-consoles/decor/modern</td>
-      <td>Modern TV stands; Sleek entertainment centers under $500; Mid-century TV consoles</td>
-    </tr>
-    <tr>
-      <td>/furniture/living-rooms/sleepers</td>
-      <td>Best sleeper sofas for small spaces; Comfortable sofa beds for guests; Queen sleeper couch</td>
-    </tr>
-    <tr>
-      <td>/furniture/living-rooms/chairs/decor/contemporary</td>
-      <td>Contemporary accent chairs; Reading chair for minimalist decor; Stylish accent chairs</td>
-    </tr>
-    <tr>
-      <td>/furniture/home-office/desks/price/under-500</td>
-      <td>Best desks under $500; Affordable small-space desks; Cheap desks with storage</td>
-    </tr>
-    <tr>
-      <td>/furniture/living-rooms/reclining/sectionals</td>
-      <td>Reclining sectionals with cup holders; Dual-power reclining sectional; Leather reclining sectional</td>
-    </tr>
-    <tr>
-      <td>/furniture/living-rooms/sofas/style/leather</td>
-      <td>Leather sofas under $1000; Top-grain leather couches; Easy-clean leather sofa</td>
-    </tr>
-    <tr>
-      <td>/furniture/kids-and-teens/beds/bunk-beds</td>
-      <td>Sturdy bunk beds with storage; Twin over full bunk bed; Kids bunk bed with staircase</td>
-    </tr>
-    <tr>
-      <td>/furniture/dining-rooms/sets/extendable</td>
-      <td>Extendable dining table set; Small dining set for apartment; 6-piece dining under $800</td>
-    </tr>
-    <tr>
-      <td>/customer-service/delivery</td>
-      <td>Same-day furniture delivery; Delivery times near me; Track furniture delivery</td>
-    </tr>
-  </tbody>
+          <tr><td>/furniture/living-rooms/sofas/style/sectional/price/under-1500</td><td>Best sectional sofas under $1500; Affordable sectional couches; Budget-friendly sectionals</td></tr>
+          <tr><td>/furniture/living-rooms/tv-consoles/decor/modern</td><td>Modern TV stands; Sleek entertainment centers under $500; Mid-century TV consoles</td></tr>
+          <tr><td>/furniture/living-rooms/sleepers</td><td>Best sleeper sofas for small spaces; Sofa bed for guests; Queen sleeper couch</td></tr>
+          <tr><td>/furniture/living-rooms/chairs/decor/contemporary</td><td>Contemporary accent chairs; Minimalist reading chair; Stylish accent chairs</td></tr>
+          <tr><td>/furniture/home-office/desks/price/under-500</td><td>Best desks under $500; Small-space desks; Desks with storage</td></tr>
+          <tr><td>/furniture/living-rooms/reclining/sectionals</td><td>Reclining sectional with cup holders; Dual-power sectional; Leather reclining sectional</td></tr>
+          <tr><td>/customer-service/delivery</td><td>Same-day furniture delivery; Delivery times near me; Track furniture delivery</td></tr>
+        </tbody>
       </table>
-      <h4>Brand / Non-brand / Geo query patterns used in simulations</h4>
+
+      <h4>Brand / Non-brand / Geo patterns used in simulations</h4>
       <table>
-  <thead>
-    <tr>
-      <th>Pattern</th>
-      <th>Intent</th>
-      <th>Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Brand + Category + Price/Feature</td>
-      <td>Shopping with brand bias</td>
-      <td>“rooms to go sectional under $1500”, “rooms to go leather sofa easy clean”</td>
-    </tr>
-    <tr>
-      <td>Brand + Geo + Category</td>
-      <td>Local availability</td>
-      <td>“rooms to go miami sectional”, “rooms to go orlando kids bunk bed”</td>
-    </tr>
-    <tr>
-      <td>Non-brand + Feature + Price</td>
-      <td>Open consideration</td>
-      <td>“best reclining sectional with USB”, “extendable dining set under $800”</td>
-    </tr>
-    <tr>
-      <td>Non-brand + Geo + Category</td>
-      <td>Local search without brand</td>
-      <td>“leather sofa atlanta”, “bunk bed knoxville”</td>
-    </tr>
-    <tr>
-      <td>Purchase trigger</td>
-      <td>Conversion-proximate</td>
-      <td>“same-day delivery couch”, “furniture 0% financing near me”</td>
-    </tr>
-  </tbody>
-</table>
+        <thead><tr><th>Pattern</th><th>Intent</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td>Brand + Category + Price/Feature</td><td>Shopping with brand bias</td><td>“rooms to go sectional under $1500”, “rooms to go leather sofa easy clean”</td></tr>
+          <tr><td>Brand + Geo + Category</td><td>Local availability</td><td>“rooms to go miami sectional”, “rooms to go orlando bunk bed”</td></tr>
+          <tr><td>Non-brand + Feature + Price</td><td>Open consideration</td><td>“best reclining sectional with USB”, “extendable dining set under $800”</td></tr>
+          <tr><td>Non-brand + Geo + Category</td><td>Local search without brand</td><td>“leather sofa atlanta”, “bunk bed knoxville”</td></tr>
+          <tr><td>Purchase trigger</td><td>Conversion-proximate</td><td>“same-day delivery couch”, “furniture 0% financing near me”</td></tr>
+        </tbody>
+      </table>
+
       <h4>Citation Landscape</h4>
       <table>
-        <thead>
-          <tr>
-            <th>Type</th><th>Example Sites</th><th>Why They Get Cited</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Type</th><th>Example Sites</th><th>Why They Get Cited</th></tr></thead>
         <tbody>
           <tr><td>🔒 Large Retailers</td><td>wayfair.com, ikea.com</td><td>Structured data, brand authority</td></tr>
           <tr><td>📋 Review Sites</td><td>goodhousekeeping.com</td><td>Trusted reviews</td></tr>
           <tr><td>💬 Forums</td><td>reddit.com, quora.com</td><td>Real user stories</td></tr>
-          <tr><td>📔 How-to Sites</td><td>thespruce.com</td><td>SEO-optimized, task-oriented content</td></tr>
+          <tr><td>📔 How-to Sites</td><td>thespruce.com</td><td>Task-oriented, SEO-optimized content</td></tr>
           <tr><td>📊 Comparison</td><td>consumerreports.org</td><td>Structured rankings with rationale</td></tr>
           <tr><td>📦 Schema-Rich Retailers</td><td>target.com, amazon.com</td><td>Deep, consistent markup</td></tr>
         </tbody>
@@ -211,57 +129,29 @@
 
       <h3>Phase 2 — Edit Mapping &amp; Content Guidelines</h3>
       <table>
-        <thead>
-          <tr>
-            <th>GEO edit</th>
-            <th>RTG guideline</th>
-            <th>Example application</th>
-          </tr>
-        </thead>
+        <thead><tr><th>GEO edit</th><th>RTG guideline</th><th>Example application</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Quotation Addition</td>
-            <td>Add short, quotable sentences summarizing the key value or spec.</td>
-            <td>“This sectional fits 12’×16’ rooms; chaise depth 62”, 2 USB ports.”</td>
-          </tr>
-          <tr>
-            <td>Statistics Addition</td>
-            <td>Insert concrete specs, dimensions, materials, warranty/ratings.</td>
-            <td>“Top-grain leather; 3-yr protection; 4.8★ across 1,240 reviews.”</td>
-          </tr>
-          <tr>
-            <td>Cite Sources</td>
-            <td>Attribute standards/tests or third-party references when relevant.</td>
-            <td>“Foam meets CertiPUR-US® standards.”</td>
-          </tr>
-          <tr>
-            <td>Fluency Optimization</td>
-            <td>Rewrite intros for clarity; front-load the answer users seek.</td>
-            <td>Lead with intent (“Best sectional under $1500: …”).</td>
-          </tr>
-          <tr>
-            <td>Technical Terms</td>
-            <td>Use precise language when shoppers seek features/specs.</td>
-            <td>“Dual-power recline, wall-hugger design, lay-flat mechanism.”</td>
-          </tr>
+          <tr><td>Quotation Addition</td><td>Add a short, liftable “Key takeaway” at top of page.</td><td>“Fits 12’×16’ rooms; chaise depth 62”, 2 USB ports.”</td></tr>
+          <tr><td>Statistics Addition</td><td>Make specs explicit and consistent.</td><td>“Top-grain leather; 3-yr protection; 4.8★ across 1,240 reviews.”</td></tr>
+          <tr><td>Cite Sources</td><td>Attribute standards/certifications where relevant.</td><td>“Foam meets CertiPUR-US® standards.”</td></tr>
+          <tr><td>Fluency Optimization</td><td>Lead with the shopper’s intent; cut filler.</td><td>“Best sectional under $1500: …”</td></tr>
+          <tr><td>Technical Terms</td><td>Use precise feature language.</td><td>“Dual-power recline, wall-hugger design, lay-flat mechanism.”</td></tr>
         </tbody>
       </table>
-<figure class="figure">
-  <img src="../images/Product Page Mockup.png" class="img-60" alt="GEO methods">
-  <figcaption class="figcaption">Product Page Mockup After Optimization.</figcaption>
-</figure>
 
-<!-- Thumbnail that crops to a fixed height -->
-<img src="../images/Product Page Mockup.png" class="thumb-cover" alt="GEO intro">
-
+      <figure class="figure">
+        <img src="../images/product-page-mockup.png" class="img-60" alt="Product page after GEO optimization">
+        <figcaption class="figcaption">Mockup: answer-first summary + clean specs + mini-FAQ.</figcaption>
+      </figure>
 
       <h3>Phase 3 — Structure &amp; Monitoring</h3>
       <ul>
-        <li><strong>Schema:</strong> reinforce extractability with Product, Review, FAQ, and LocalBusiness schema.</li>
-        <li><strong>Tracking:</strong> pre/post runs on the same query set to measure inclusion, position, and salience change.</li>
+        <li><strong>Schema:</strong> Product, Review, FAQ, LocalBusiness (kept in sync with the UI).</li>
+        <li><strong>Tracking:</strong> repeat pre/post runs on the same query set; measure inclusion, position, salience by engine.</li>
       </ul>
     </section>
 
+    <!-- 5) Findings -->
     <section>
       <h2>📊 Key Findings</h2>
       <table>
@@ -270,79 +160,66 @@
           <tr><td>Citation gaps</td><td>RTG under-cited despite SERP presence; competitor pages are more quotable.</td></tr>
           <tr><td>Content depth</td><td>Top-cited pages pair concise claims with stats/specs and clear attribution.</td></tr>
           <tr><td>Schema</td><td>Richer Product/Review/FAQ markup correlates with easier extraction.</td></tr>
-          <tr><td>Edit leverage</td><td>Edits aligned to GEO (quotes, stats, fluency) yielded measurable visibility lifts in tests.</td></tr>
+          <tr><td>Edit leverage</td><td>GEO-aligned edits (quotes, stats, fluency) produced measurable visibility lifts in tests.</td></tr>
         </tbody>
       </table>
     </section>
 
+    <!-- 6) Recommendations -->
     <section>
       <h2>🚀 Recommendations</h2>
-<ol>
-  <li><strong>Make pages quotable (answer-first).</strong>
-    <ul>
-      <li>Add a 1–2 sentence “Key Takeaway” at the top of each product/category page with the main value prop, price/size guardrails, and 1–2 standout specs.</li>
-      <li>Use short, liftable lines (supports GEO’s “Quotation Addition”).</li>
-    </ul>
-  </li>
+      <ol>
+        <li><strong>Make pages quotable (answer-first).</strong>
+          <ul>
+            <li>Add a 1–2 sentence “Key Takeaway” at the top of each product/category page with the main value prop, price/size guardrails, and 1–2 standout specs.</li>
+            <li>Use short, liftable lines (supports GEO’s Quotation Addition).</li>
+          </ul>
+        </li>
+        <li><strong>Codify specs &amp; stats.</strong>
+          <ul>
+            <li>Explicit, consistent specs: dimensions, materials, power features, warranty, review count &amp; rating.</li>
+            <li>Micro-facts models can quote: “fits 12’×16’ rooms”, “chaise depth 62””, “USB-A &amp; USB-C ports”.</li>
+          </ul>
+        </li>
+        <li><strong>Intent-matching content.</strong>
+          <ul>
+            <li>Buying guides that mirror top intents (e.g., “Top 10 Sectionals Under $1500”, “Best Sleeper Sofas for Small Spaces”).</li>
+            <li>Mini-FAQs answering delivery, financing, assembly, care, space fit.</li>
+          </ul>
+        </li>
+        <li><strong>Structured data that aids extraction.</strong>
+          <ul>
+            <li>Implement/refresh <em>Product</em>, <em>Review</em>, <em>FAQ</em>, <em>LocalBusiness</em> schema; keep synchronized.</li>
+            <li>Use canonical model numbers and consistent naming to reduce entity ambiguity.</li>
+          </ul>
+        </li>
+        <li><strong>Local &amp; conversion signals.</strong>
+          <ul>
+            <li>Strengthen store pages (inventory hints, hours, nearby availability) to win brand+geo prompts.</li>
+            <li>Link to <code>/customer-service/delivery</code> and <code>/customer-service/financing</code> with concise, quotable policy summaries.</li>
+          </ul>
+        </li>
+        <li><strong>Measurement &amp; iteration.</strong>
+          <ul>
+            <li>Track inclusion, position, and salience by query family and engine.</li>
+            <li>Run pre/post tests after each content release; expand query sets quarterly.</li>
+          </ul>
+        </li>
+      </ol>
 
-  <li><strong>Codify specs & stats.</strong>
-    <ul>
-      <li>Ensure core specs are explicit and consistent: dimensions, materials, power features, warranty, review count & rating.</li>
-      <li>Add micro-facts that models can quote: “fits 12’×16’ rooms”, “chaise depth 62””, “USB-A & USB-C ports”.</li>
-    </ul>
-  </li>
-
-  <li><strong>Intent-matching content.</strong>
-    <ul>
-      <li>Publish buying guides that mirror the highest-volume intents (e.g., “Top 10 Sectionals Under $1500”, “Best Sleeper Sofas for Small Spaces”).</li>
-      <li>Add mini-FAQs per page answering the exact prompts we test (delivery, financing, assembly, care, space fit).</li>
-    </ul>
-  </li>
-
-  <li><strong>Structured data that aids extraction.</strong>
-    <ul>
-      <li>Implement/refresh <em>Product</em>, <em>Review</em>, <em>FAQ</em>, and <em>LocalBusiness</em> schema. Keep values synchronized with the UI.</li>
-      <li>Use canonical model numbers and consistent naming to reduce entity ambiguity.</li>
-    </ul>
-  </li>
-
-  <li><strong>Local & conversion signals.</strong>
-    <ul>
-      <li>Strengthen store pages with inventory hints, hours, and nearby availability to win brand+geo prompts.</li>
-      <li>Link clearly to <code>/customer-service/delivery</code> and <code>/customer-service/financing</code>; add concise, quotable policy summaries.</li>
-    </ul>
-  </li>
-
-  <li><strong>Measurement & iteration.</strong>
-    <ul>
-      <li>Track: inclusion (cited/not), position in the answer, and salience (text quoted) by query family and engine.</li>
-      <li>Run pre/post tests after each content release; expand query sets quarterly as engines evolve.</li>
-    </ul>
-  </li>
-</ol>
-
-<div class="callout">
-  <strong>Priority rollout (6–8 weeks):</strong>
-  Week 1–2: Spec/FAQ blocks on top 20 pages • Week 3–4: Buying-guide pair for sectionals & sleepers • Week 5–6: Schema audit & fixes • Week 7–8: Re-benchmark, report lifts.
-</div>
-
+      <div class="callout">
+        <strong>Priority rollout (6–8 weeks):</strong>
+        Week 1–2: Spec/FAQ blocks on top 20 pages • Week 3–4: Buying-guide pair for sectionals &amp; sleepers •
+        Week 5–6: Schema audit &amp; fixes • Week 7–8: Re-benchmark and report lifts.
+      </div>
     </section>
 
-    <section>
-      <h2>🧠 Lessons Learned</h2>
-      <ul>
-        <li>GEO shifts the goal from ranking to <em>being cited inside the answer</em>.</li>
-        <li>Quotability, specificity, and fluency matter more than keyword density.</li>
-        <li>Effectiveness varies by domain—treat GEO as an iterative, measured process.</li>
-      </ul>
-    </section>
-
+    <!-- 7) Reference -->
     <section>
       <h2>📖 Reference</h2>
       <p>
         Aggarwal, P., Murahari, V., Rajpurohit, T., Vijayakumar, A., Narasimhan, K., &amp; Deshpande, A. (2024).
-        <em>GEO: Generative Engine Optimization.</em> Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’24).
-        DOI: 10.1145/3637528.3671900. Our methods follow this work; high-impact edits typically yield ≈20–40% visibility lift.
+        <em>GEO: Generative Engine Optimization.</em> KDD ’24. DOI: 10.1145/3637528.3671900.
       </p>
     </section>
   </main>
