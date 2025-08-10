@@ -33,16 +33,20 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-/* Reusable image sizes */
-.img-100 { width: 100%; height: auto; }
-.img-75  { width: 75%;  height: auto; }
-.img-60  { width: 60%;  height: auto; }
-.img-50  { width: 50%;  height: auto; }
-.img-400 { width: 400px; height: auto; }  /* fixed width option */
+/* Make every image responsive */
+img { max-width: 100%; height: auto; }
 
-/* Center figures nicely */
+/* Nice centering for figures */
 .figure { text-align: center; }
 .figure img { display: inline-block; }
 
-/* Optional: uniform-height thumbnails that crop neatly */
-.thumb-cover { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+/* Reusable sizes (optional) */
+.img-100 { width: 100%; height: auto; }
+.img-75  { width: 75%;  height: auto; }
+.img-60  { width: 60%;  height: auto; }
+
+/* 2-up grid that collapses on mobile */
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
