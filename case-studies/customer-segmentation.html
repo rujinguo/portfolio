@@ -1,59 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Customer Segmentation & Churn Prediction</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Customer Segmentation & Churn Prediction | Ruby Guo</title>
+  <style>
+    :root{
+      --text:#1f2328;
+      --muted:#57606a;
+      --border:#eaeef2;
+      --bg:#ffffff;
+      --card:#f6f8fa;
+      --link:#0969da;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height:1.6;
+    }
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    header{
+      margin-bottom: 18px;
+    }
+    .kicker{
+      color:var(--muted);
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+    h1{
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .sub{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .meta{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill{
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    hr{
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+    h2{
+      font-size: 20px;
+      margin: 22px 0 10px;
+    }
+    h3{
+      font-size: 16px;
+      margin: 18px 0 8px;
+    }
+    p{ margin: 0 0 12px; }
+    ul{ margin: 0 0 12px 20px; }
+    .callout{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0 16px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 860px){
+      .grid.two{ grid-template-columns: 1fr 1fr; }
+    }
+    figure{
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    figcaption{
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .small{
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .section-card{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      background: #fff;
+    }
+    .footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px 14px;
+      margin-top: 10px;
+    }
+    .links a{
+      display:inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Customer Segmentation & Churn Prediction</h1>
-    <p><strong>Segmented 9,164 e-commerce customers and predicted 30-day purchases with 92% accuracy to drive targeted marketing.</strong></p>
-    <p><a href="../index.html">← Back to Portfolio</a></p>
-    <hr>
-  </header>
+  <div class="wrap">
+    <header>
+      <p class="kicker">Case Study • Marketing Analytics</p>
+      <h1>Customer Segmentation & Churn Prediction</h1>
+      <p class="sub">
+        Segmented <b>9,164</b> e-commerce customers using <b>K-means</b> (feature selection + <b>PCA</b>) and built an <b>XGBoost</b>
+        churn model (<b>92% accuracy</b>) to support targeted marketing and retention strategies.
+      </p>
 
-  <main>
-    <section>
-      <h2>🔍 Project Overview</h2>
-      <p>Analyzed purchase histories (2014–2021) to:</p>
+      <ul class="meta">
+        <li class="pill"><b>Tools:</b> Python • SQL • Tableau</li>
+        <li class="pill"><b>Methods:</b> RFM • PCA • K-means • t-SNE • XGBoost</li>
+        <li class="pill"><b>Deliverables:</b> Segments • Insights • Model</li>
+      </ul>
+
+      <div class="links">
+        <a href="../index.html">← Back to Portfolio</a>
+        <a href="https://github.com/rujinguo/portfolio" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </header>
+
+    <hr />
+
+    <section class="section-card">
+      <h2>Problem</h2>
+      <p>
+        Marketing teams often struggle to decide <b>who to prioritize</b> and <b>how to personalize</b> messaging.
+        This project groups customers into behavior-based segments and builds a churn prediction model to identify
+        high-risk customers for proactive retention.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Data</h2>
       <ul>
-        <li>Cluster customers via K-means on RFM + PCA features.</li>
-        <li>Build XGBoost (plus baseline models) to predict next-30-day purchases.</li>
+        <li><b>Size:</b> 9,164 customers</li>
+        <li><b>Time range:</b> 2014–2021</li>
+        <li><b>Data type:</b> Transaction history + product/category information</li>
+      </ul>
+
+      <div class="callout">
+        <b>What I built:</b> a customer-level table with behavior and value features (RFM + category spend) for clustering,
+        plus a churn label for supervised modeling.
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Feature Engineering</h2>
+      <p>
+        I aggregated transaction data to the customer level and created features that reflect customer value and behavior.
+        The core framework is <b>RFM</b>:
+      </p>
+      <ul>
+        <li><b>Recency:</b> how recently a customer purchased</li>
+        <li><b>Frequency:</b> how often they purchased</li>
+        <li><b>Monetary:</b> how much they spent</li>
+      </ul>
+
+      <h3>Additional features</h3>
+      <ul>
+        <li>Customer tenure</li>
+        <li>Average spend, total quantity, purchase cycle</li>
+        <li>Category spend (e.g., beverage, food, coffee, dishware, kitchen supplies, medicine)</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🌟 Key Findings</h2>
+    <section class="section-card">
+      <h2>Modeling Approach</h2>
+
+      <h3>1) Reduce redundancy (feature selection)</h3>
+      <p>
+        Because K-means relies on distance, highly correlated features can distort clustering. I removed redundant features
+        using correlation checks to improve stability and interpretability.
+      </p>
+
+      <h3>2) Dimensionality reduction (PCA)</h3>
+      <p>
+        I also ran PCA to compress features into a smaller set of components while keeping most of the variance.
+        This provides an alternative representation for clustering and helps visualize segment structure.
+      </p>
+
+      <h3>3) Clustering (K-means)</h3>
+      <p>
+        I used the elbow method to choose a practical number of clusters for business use (balanced separation + interpretability).
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Figures</h2>
+      <p class="small">
+        Add these images to <code>images/customer-segmentation/</code> in your repo. Since this page is in
+        <code>case-studies/</code>, the paths below use <code>../images/...</code>.
+      </p>
+
+      <div class="grid two">
+        <figure>
+          <figcaption><b>Figure 4.</b> Correlation matrix (used for feature selection).</figcaption>
+          <img src="../images/customer-segmentation/fig4-correlation-matrix.png" alt="Figure 4: Correlation matrix">
+        </figure>
+
+        <figure>
+          <figcaption><b>Figure 5.</b> PCA explained variance (component selection).</figcaption>
+          <img src="../images/customer-segmentation/fig5-pca-variance.png" alt="Figure 5: PCA explained variance">
+        </figure>
+      </div>
+
+      <div class="grid">
+        <figure>
+          <figcaption><b>Figure 6.</b> Elbow method (select K for K-means).</figcaption>
+          <img src="../images/customer-segmentation/fig6-elbow.png" alt="Figure 6: Elbow plot">
+        </figure>
+      </div>
+
+      <h3>Cluster visualization & interpretation</h3>
+
+      <div class="grid two">
+        <figure>
+          <figcaption><b>Figure 7.</b> t-SNE visualization (clusters using selected features).</figcaption>
+          <img src="../images/customer-segmentation/fig7-tsne-feature-selection.png" alt="Figure 7: t-SNE (feature selection)">
+        </figure>
+
+        <figure>
+          <figcaption><b>Figure 8.</b> Radar chart (cluster profiles using selected features).</figcaption>
+          <img src="../images/customer-segmentation/fig8-radar-feature-selection.png" alt="Figure 8: Radar chart (feature selection)">
+        </figure>
+      </div>
+
+      <div class="grid two">
+        <figure>
+          <figcaption><b>Figure 9.</b> t-SNE visualization (clusters using PCA components).</figcaption>
+          <img src="../images/customer-segmentation/fig9-tsne-pca.png" alt="Figure 9: t-SNE (PCA)">
+        </figure>
+
+        <figure>
+          <figcaption><b>Figure 10.</b> Radar chart (cluster profiles using PCA components).</figcaption>
+          <img src="../images/customer-segmentation/fig10-radar-pca.png" alt="Figure 10: Radar chart (PCA)">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Segment Insights</h2>
+      <p>
+        The segments surfaced clear, actionable groups that map well to marketing strategies. Common patterns included:
+      </p>
+
+      <h3>High-value customers</h3>
       <ul>
-        <li>Identified five distinct segments (high-value vs. at-risk groups).</li>
-        <li>XGBoost achieved ROC AUC 0.98 &amp; 92% accuracy.</li>
-        <li>Recommended targeted retention offers and upsell campaigns.</li>
+        <li>High frequency + high spend + recent activity</li>
+        <li><b>Marketing action:</b> loyalty/VIP offers, retention messaging, higher budget priority</li>
+      </ul>
+
+      <h3>At-risk customers</h3>
+      <ul>
+        <li>Purchases slowing down (recency increasing) while spend may still be meaningful</li>
+        <li><b>Marketing action:</b> win-back campaigns, reminders, personalized incentives</li>
+      </ul>
+
+      <h3>Low-value / inactive customers</h3>
+      <ul>
+        <li>Low frequency + low spend + long time since last purchase</li>
+        <li><b>Marketing action:</b> low-cost reactivation, exclude from expensive targeting</li>
+      </ul>
+
+      <h3>Category-driven segments</h3>
+      <ul>
+        <li>Clusters that over-index on certain product categories</li>
+        <li><b>Marketing action:</b> tailor creative + offers around category interest</li>
       </ul>
     </section>
 
-    <section>
-      <h2>🛠 Methods & Tools</h2>
+    <section class="section-card">
+      <h2>Churn Prediction</h2>
+      <p>
+        To complement segmentation, I trained an <b>XGBoost</b> model to predict churn risk and help prioritize retention outreach.
+      </p>
       <ul>
-        <li><strong>Clustering:</strong> K-means with RFM + PCA inputs</li>
-        <li><strong>Modeling:</strong> Naive Bayes, Logistic Reg., Decision Tree, Random Forest, XGBoost (10-fold CV)</li>
-        <li><strong>Stack:</strong> Python, pandas, scikit-learn, matplotlib</li>
+        <li><b>Model:</b> XGBoost classifier</li>
+        <li><b>Outcome:</b> <b>92% accuracy</b> (as reported in the case summary)</li>
+        <li><b>Use:</b> flag high-risk customers for targeted retention campaigns</li>
       </ul>
+
+      <div class="callout">
+        <b>How marketing can use this:</b> combine segment + churn risk to decide (1) who to target, (2) what message/offer to use,
+        and (3) how much budget to allocate.
+      </div>
     </section>
 
-    <section>
-      <h2>🚀 Recommendations</h2>
-      <ol>
-        <li>Create custom offers for at-risk clusters.</li>
-        <li>Run upsell campaigns to high-value segments.</li>
-        <li>Build an RFM dashboard for ongoing monitoring.</li>
-      </ol>
+    <section class="section-card">
+      <h2>Conclusion</h2>
+      <p>
+        This analysis produced customer segments that are easy to act on and a churn model to prioritize retention.
+        Together, they support more efficient budget allocation, better personalization, and clearer lifecycle marketing strategy.
+      </p>
+      <p class="small">
+        Note: Unsupervised clustering doesn’t have a single “accuracy” metric; I selected the final segmentation based on
+        a combination of separation quality and business usefulness.
+      </p>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2026 Ruby Guo | <a href="../index.html">Back to Portfolio</a></p>
-  </footer>
+    <div class="footer">
+      <p>© 2026 Ruby Guo</p>
+    </div>
+  </div>
 </body>
 </html>
